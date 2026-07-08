@@ -1,0 +1,297 @@
+/* Reset básico e Fonte Nova */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #121212;
+    color: #ffffff;
+}
+nav {
+    background: #1a1a1a ; /* Menu superior escuro */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff; /* Letras do menu brancas */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Layout Principal */
+
+
+main {
+    flex: 3;
+    background: #121212 ;
+    border: none;
+    border-radius: 16px;
+    padding: 40px;
+    order: 2; /* Garante que o conteúdo fique na direita */
+}
+
+
+/* Barra Lateral (Perfil) */
+aside {
+    flex: 1;
+    min-width: 280px; /* Define uma largura mínima pro bloco não espremer muito */
+    background: #1e1e1e;
+    border: none;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    order: 1; /* Força o aside a ir para a extrema esquerda */
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* Quadrada com cantos levemente suaves */
+    margin-bottom: 20px;
+    border: 1px solid #333333; /* Borda escura sutil */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: block; /* Garante que a foto fique alinhada à esquerda corretamente */
+}
+
+aside p {
+    line-height: 1.8;
+    color: #e0e0e0; /* Texto do perfil cinza claro */
+    font-size: 0.95rem;
+    text-align: center; /* Garante o alinhamento normal à esquerda */
+}
+
+
+/* Tipografia e Textos */
+.perfil { margin-bottom: 50px; }
+
+.perfil h1 {
+    font-size: 46px;
+    color: #ffffff; /* Título principal branco */
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.subtitulo {
+    color: #aaaaaa; /* Subtítulo cinza claro */
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+p {
+    line-height: 1.8;
+    color: #e0e0e0; /* Parágrafos em tom cinza claro confortável para ler */
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #ffffff; /* Destaques em branco */
+}
+
+/* Seções de Projetos */
+.projeto { margin-top: 60px; }
+
+.projeto h2 {
+    color: #ffffff; /* Título dos projetos branco */
+    border-left: 5px solid #ffffff; /* Detalhe lateral branco */
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Galeria de Imagens */
+.galeria-evento {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.galeria-evento img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    border: 1px solid #333333;
+    transition: transform 0.3s ease;
+}
+
+.galeria-evento img:hover {
+    transform: scale(1.03);
+}
+
+/* Cartões de Projetos (Links) */
+.projeto-card {
+    display: flex;
+    gap: 25px;
+    margin: 25px 0;
+    padding: 20px;
+    background: #252525; /* Fundo do card ligeiramente mais claro para contraste */
+    border: 1px solid #333333;
+    border-radius: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.projeto-card:hover {
+    border-color: #ffffff; /* Borda muda para branco no hover */
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.projeto-card img {
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    border: 1px solid #333333;
+}
+
+.projeto-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projeto-info h3 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.projeto-info p {
+    color: #cccccc;
+}
+
+.projeto-info span {
+    color: #aaaaaa; /* REMOVIDO AZUL - Texto indicativo agora é cinza claro */
+    font-weight: 600;
+    margin-top: auto;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+/* Botão de Música Fixo */
+.musica-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #444444, #222222); /* Botão em tons escuros premium */
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 50px;
+    padding: 15px 25px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.musica-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #555555, #333333);
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    background: #1a1a1a ;
+    color: #888888 ;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para Celulares */
+@media(max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    aside {
+        position: static;
+        width: 100%;
+        order: -1;
+    }
+    .projeto-card {
+        flex-direction: column;
+    }
+    .projeto-card img {
+        width: 100%;
+        height: auto;
+    }
+    .perfil h1 {
+        font-size: 34px;
+    }
+}
+
+/* --- EFEITO DE ZOOM NAS IMAGENS (MODAL) --- */
+.modal-zoom {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 2000; /* Fica por cima de tudo, até do botão de música */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo do site */
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-zoom.mostrar {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-zoom img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+.modal-zoom.mostrar img {
+    transform: scale(1); /* Animação expandindo a foto */
+}
+
+/* Ajuste nas imagens da galeria para mostrar que são clicáveis */
+.galeria-evento img {
+    cursor: zoom-in;
+}
