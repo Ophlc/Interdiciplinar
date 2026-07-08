@@ -1,0 +1,135 @@
+*{
+    margin: 0; /*reseta o estilo padrão do navegador*/
+    padding: 0; 
+    box-sizing: border-box; /*significa que a largura e a altura dos elementos incluem o padding e o border, evitando que eles ultrapassem o tamanho definido*/
+}
+
+body{
+    display: flex; /*Ocupar todo o espaço disponível*/
+    flex-direction: column; /*elementos organizados em coluna, um abaixo do outro*/
+    min-height: 100vh; /*viewport, mede a altura da tela 100vh =100%*/
+    max-width: 1920px; 
+    width: 100%;
+    margin: 0 auto; /*centraliza horizontal*/
+}
+
+header{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px; /*recuo interno*/
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+nav{
+    background-color: rgb(221, 24, 17);
+    padding: 10px;
+}
+
+nav ul{
+    list-style-type: none; 
+    display: flex;
+    justify-content: center;
+}
+
+nav li{
+    margin: 0 15px; /*baixocima esquerdadireita*/
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size:clamp(0.9rem, 2.5vw, 1.2rem);
+}
+
+/*clamp - (mínimo, ideal, máximo)
+mínimo - nunca maior que isso 
+ideal - valor fluido, wv, mede a largura da tela, usa largura relativa da tela
+máximo - trava o aumento 
+*/
+.container{ /*Usando a classe container que está como nome da classe div*/
+    display: flex;
+    flex: 1;   
+    
+}
+
+
+aside img{
+    width: 100%;
+    height: auto;
+}
+
+.insta{
+    width: 15px;
+}
+
+aside {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    flex: 1;
+    order: 2;
+}
+
+main {
+    background-color: rgb(19, 134, 187);
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    flex: 7;
+    font-size: clamp(1.4rem, 2.5vw, 1.5rem);
+    order: 1;
+}
+
+footer{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+}
+
+.texto-recuado {
+  margin-left: 550px; /* Empurra o texto para a direita */
+  margin-bottom: 15px; /* Substitui o <br> com um espaçamento melhor embaixo */
+}
+
+.musica-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #444444, #222222); /* Botão em tons escuros premium */
+    color: #ffffff !important;
+    border: 1px solid #555555;
+    border-radius: 50px;
+    padding: 15px 25px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.musica-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #555555, #333333);
+}
+
+@media(max-width:768px){
+    body{
+        width: 100%;
+        padding: 0;
+        background-color: black;
+    }
+    .container{
+        flex-direction: column; /*empilhar*/
+    }
+    anside{
+        order: 2;
+    }
+    main{
+        order: 1;
+    }
+}

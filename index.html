@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Interdiciplinar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="Lucas_Lima/stylelucas.css">
+
+</head>
+<body>
+
+     <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Diego_Luka/pag1.html" >Diego.L</a></li>
+            <li><a href="Enzo/pag2.html">Enzo</a></li>
+            <li><a href="Lucas_Lima/pag3.html">Lucas.L</a></li>
+            <li><a href="Pedro_Henrique/pag4.html">Pedro.H</a></li>
+            <li><a href="Pedro_Wilians/pag5.html">Pedro.W</a></li>
+            <li><a href="bibliografia/pag6.html">Bibliografia 
+            <img src="book.png" alt="Logo" width="25" height="15" class="d-inline-block align-text-top"></a>
+            <div class="container-fluid"> </div></li>
+        </ul>
+     </nav>
+
+        <div class="container">
+        <aside>
+            <img src="galerinha.jpeg"> <br><br>
+            <img src="Insta.png" class="insta">Instagram e nome dos integrantes<br><br>
+            <a href="https://www.instagram.com/_olderror/" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Diego Luka</a><br><br>
+            <a href="https://www.instagram.com/nascimento1x5/" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Enzo do Nascimento</a><br><br>
+            <a href="https://www.instagram.com/lucasamostrado/" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Lucas Lima</a><br><br>
+            <a href="https://www.instagram.com/olc.ph/" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Pedro Henrique</a><br><br>
+            <a href="https://www.instagram.com/pedro28willians/" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Pedro Willians</a><br><br>
+        </aside>
+        
+<main>
+
+    <h2>Sobre nós</h2><br>
+    <p>Somos um grupo de estudantes da ETEC Drª Ruth Cardoso, que desenvolvemso esse portfólio interdisciplinar de PW1, PTIC E INGLÊS, com o objetivo de reunir, organizar e apresentar as atividades realizadas ao longo do curso.</p>
+    <p>Este projeto foi criado para demonstrar nossos conhecimentos em diferentes disciplinas, utilizando tecnologias como HTML, CSS, JavaScript para oferecer uma navegação simples, moderna e intuitiva.</p><br>
+    
+    <hr>
+    <br>
+    <form>
+
+
+        <section class="container my-5" id="feedback">
+        <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <h2 class="text-center mb-3">Fale oque você achou</h2><br>
+            <p class="text-center text-muted mb-4">Sua opinião é muito importante para nós! Conte o que achou do nosso portfólio.</p><br>
+
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label><br>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                </div><br>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label><br>
+                    <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                </div><br>
+                <div class="mb-3">
+                    <label for="turma" class="form-label">Turma (Opcional)</label><br>
+                    <input type="text" class="form-control" id="turma" placeholder="Desenvolvimento de Sistemas" >
+                </div><br>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label><br>
+                    <textarea class="form-control" id="mensagem" rows="5" placeholder="Escreva seu feedback..." required style="resize: none;"></textarea>
+                </div><br>
+                <div class="mb-4">
+                    <label class="form-label d-block">Avaliação do Site</label>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="estrela1" value="1" required>
+                        <label class="form-check-label" for="estrela1">⭐</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="estrela2" value="2">
+                        <label class="form-check-label" for="estrela2">⭐⭐</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="estrela3" value="3">
+                        <label class="form-check-label" for="estrela3">⭐⭐⭐</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="estrela4" value="4">
+                        <label class="form-check-label" for="estrela4">⭐⭐⭐⭐</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="avaliacao" id="estrela5" value="5">
+                        <label class="form-check-label" for="estrela5">⭐⭐⭐⭐⭐</label><br>
+                    </div>
+                </div><br>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Enviar Feedback
+                    </button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </section>
+
+    </form>
+
+    <!-- Botão da música -->
+<button id="btnMusica" class="musica-btn">
+    Tocar Música
+</button>
+
+<!-- Áudio -->
+<audio id="musica" loop>
+    <source src="musica_fundo_site.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+</audio>
+
+<script src="script.js"></script>
+
+</main>
+  
+     </div>
+
+     <footer>RM: 10886, 10887, 10891, 10252 e 11096 </footer>
+
+</body>
+</html>
