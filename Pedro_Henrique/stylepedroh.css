@@ -1,0 +1,492 @@
+/* ============================================================
+   Pedro Henrique — Portfólio
+   Paleta: roxo profundo + preto (fundo) · lavanda (destaque) · bege (texto)
+   Tipografia: Space Grotesk (títulos) + Inter (corpo)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+    --bg-black: #08050f;
+    --purple-deep: #2b0f5c;
+    --purple: #5517a5;
+    --purple-bright: #9b4dff;
+    --lavender: #c9a9ff;
+    --beige: #f0e9d2;
+    --text-soft: #e7e2f2;
+    --card-bg: rgba(255,255,255,0.05);
+    --card-border: rgba(201,169,255,0.25);
+    --shadow-glow: 0 0 40px rgba(155,77,255,0.25);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    background: radial-gradient(circle at 15% 0%, rgba(155,77,255,0.18), transparent 45%),
+        linear-gradient(160deg, var(--purple-deep) 0%, var(--bg-black) 65%) !important;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-soft);
+    background: radial-gradient(circle at 15% 0%, rgba(155,77,255,0.18), transparent 45%),
+        linear-gradient(160deg, var(--purple-deep) 0%, var(--bg-black) 65%) !important;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ---------- Header / Nav ---------- */
+
+header{
+    background-color: var(--purple-deep) !important;
+    color: var(--beige) !important;
+}
+
+nav{
+    background: linear-gradient(90deg, var(--purple-deep), var(--purple)) !important;
+    border-bottom: 1px solid rgba(201,169,255,0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 2px 16px;
+}
+
+nav ul li{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    color: var(--beige);
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 100;
+    font-size: 2.95rem;
+    letter-spacing: 0.02em;
+    padding: 2px 14px;
+    border-radius: 8px;
+    position: relative;
+    transition: 0.25s ease;
+}
+
+nav a:hover{
+    color: #ffffff;
+    background: rgba(255,255,255,0.08);
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 4px;
+    height: 2px;
+    background: var(--lavender);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+nav a:hover::after{
+    transform: scaleX(1);
+}
+
+/* ---------- Layout ---------- */
+
+
+
+main{
+    background: radial-gradient(circle at 15% 0%, rgba(155,77,255,0.18), transparent 45%),
+        linear-gradient(160deg, var(--purple-deep) 0%, var(--bg-black) 65%) !important;
+    flex: 1 1 640px;
+    border-radius: 18px;
+    padding: clamp(20px, 3vw, 40px);
+    border: 1px solid rgba(201,169,255,0.12);
+}
+
+/* ---------- Intro / Hero text ---------- */
+
+main > p{
+    line-height: 1.7;
+    color: var(--text-soft);
+    max-width: 70ch;
+}
+
+main hr{
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, var(--purple-bright), transparent);
+    margin: 32px 0;
+}
+
+/* ---------- Headings ---------- */
+
+h2{
+    border-left: 4px solid var(--purple-bright);
+    color: #ffffff;
+    padding: 8px 0 8px 8px;
+    margin: 28px 0 6px;
+    font-size: 1.5rem;
+    letter-spacing: 0.01em;
+}
+
+main > h2:first-of-type{
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    border-left-width: 6px;
+}
+
+.eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    margin: 0 0 4px 16px;
+}
+
+.eyebrow::before{
+    content: "";
+    width: 18px;
+    height: 1px;
+    background: var(--lavender);
+    display: inline-block;
+}
+
+/* ---------- Project links ---------- */
+
+main a{
+    color: var(--lavender);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+main a:hover{
+    color: #ffffff;
+    border-bottom-color: var(--lavender);
+}
+
+/* ---------- Image grids ---------- */
+
+.Reinogeek,
+.Reinogeek02,
+.Diversidade{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.Reinogeek img,
+.Reinogeek02 img,
+.Diversidade img{
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    border: 1px solid var(--card-border);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.Reinogeek img:hover,
+.Reinogeek02 img:hover,
+.Diversidade img:hover{
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.Doemais{
+    display: flex;
+    margin-top: 18px;
+}
+
+.Doemais img{
+    width: min(1000px, 90%);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    border: 1px solid var(--card-border);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.Doemais img:hover{
+    transform: scale(1.03);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ---------- PresentContinuous ---------- */
+
+.Present{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.Present img{
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    border: 1px solid var(--card-border);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.Present img:hover{
+    transform: scale(1.03);
+    box-shadow: var(--shadow-glow);
+}
+
+@media(max-width:600px){
+    .Present{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Aside / Profile card ---------- */
+
+aside{
+    background: linear-gradient(180deg, var(--purple), var(--purple-deep)) !important;
+    flex: 0 1 300px;
+    padding: 24px;
+    top: 20px;
+    border: 1px solid rgba(201,169,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card{
+    max-width: 100%;
+    margin: 0;
+}
+
+.profile-photo{
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img{
+    transform: scale(1.06);
+}
+
+.profile-name{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: 0 0 4px;
+}
+
+.profile-tag{
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    background: var(--bg-black);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+}
+
+.profile-info{
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-info li{
+    font-size: 0.88rem;
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+    color: var(--text-soft);
+}
+
+.profile-info li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--lavender);
+}
+
+.card p{
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text-soft);
+    transition: transform 0.3s ease;
+}
+
+.card:hover p{
+    transform: translateY(4px);
+}
+
+/* ---------- Zoom / Lightbox de imagens ---------- */
+
+/* deixa claro que a imagem é clicável */
+.Reinogeek img,
+.Reinogeek02 img,
+.Diversidade img,
+.Doemais img,
+.Present img,
+.card img{
+    cursor: zoom-in;
+}
+
+/* overlay escuro que cobre a tela */
+.lightbox-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(8,5,15,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-overlay img{
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: var(--shadow-glow);
+    cursor: zoom-out;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active img{
+    transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .lightbox-overlay,
+    .lightbox-overlay img{
+        transition: none !important;
+    }
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+    background: linear-gradient(90deg, var(--purple-deep), var(--purple)) !important;
+    color: var(--beige) !important;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    padding: 16px;
+    border-top: 1px solid rgba(201,169,255,0.2);
+}
+
+/* ---------- Music button ---------- */
+
+.musica-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: linear-gradient(135deg, var(--purple-bright), var(--purple));
+    color: white;
+
+    border: none;
+    border-radius: 999px;
+
+    padding: 12px 20px;
+
+    cursor: pointer;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+
+    z-index: 9999;
+
+    box-shadow: 0 6px 20px rgba(155,77,255,0.4);
+    transition: .3s;
+}
+
+.musica-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(155,77,255,0.55);
+}
+
+.perfil { margin-bottom: 50px; }
+
+.perfil h1 {
+    font-size: 46px;
+    color: #ffffff; /* Título principal branco */
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:900px){
+    .container{
+        flex-direction: column;
+    }
+    aside{
+        position: static;
+        flex: 1 1 auto;
+    }
+}
+
+@media(max-width:768px){
+    aside{
+        order: 1 !important;
+    }
+    main{
+        order: 2;
+    }
+    nav ul{
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    *{
+        transition: none !important;
+    }
+}
